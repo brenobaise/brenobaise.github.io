@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+Rounded+1c&family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-lobster: "Lobster", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-rounded: "M PLUS Rounded 1c", sans-serif;
+}
