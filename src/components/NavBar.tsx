@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,18 +10,6 @@ export default function NavBar() {
     { name: "Contact", href: "#" },
   ];
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    // Cleanup function
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
   return (
     <>
       <nav className='md:bg-slate-900 text-white flex justify-end items-center md:text-3xl md:py-4 px-6'>
@@ -66,7 +54,7 @@ export default function NavBar() {
 
       {/* Mobile fullscreen menu */}
       <div
-        className={`md:hidden fixed inset-0 bg-slate-900 z-40 transition-transform duration-300 ${
+        className={`md:hidden h-screen overflow-hidden fixed inset-0 bg-slate-900 z-40 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
