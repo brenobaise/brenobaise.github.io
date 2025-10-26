@@ -19,7 +19,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className='md:bg-slate-900 text-white flex justify-end items-center md:text-3xl md:py-4 px-6'>
+      <nav className='md:bg-slate-900  text-white flex justify-end items-center md:text-3xl md:py-4 px-6'>
         {/* Hamburger button -  mobile only */}
         <button
           onClick={() => setIsOpen(!isOpen)}

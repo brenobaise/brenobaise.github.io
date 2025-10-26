@@ -6,7 +6,7 @@ export default function SecondProjectCard() {
         {/* Project Description */}
         <div className='order-2 lg:order-2'>
           <h3 className='text-2xl font-semibold text-amber-400 mb-4 '>
-            Some site
+            This is an example section, still under construction
           </h3>
           <p className='text-lg text-slate-300 leading-relaxed'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
