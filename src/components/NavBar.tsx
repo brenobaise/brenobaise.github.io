@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <nav className='text-white flex justify-center items-center '>
+    <nav className='text-white flex justify-center items-center md:text-3xl md:py-4 '>
       <ul
         className='inline-flex gap-6 py-6 px-6 my-6
       rounded-full text-center items-center justify-center select-none '

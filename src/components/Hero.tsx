@@ -12,7 +12,7 @@ export default function Hero() {
             BEng Software Engineering
           </h3>
 
-          <p className='mt-6 text-slate-300 text-lg leading-relaxed'>
+          <p className='mt-6 text-slate-300 text-lg leading-relaxed pb-2'>
             I'm a
             <span className='text-amber-400 font-medium'> Java Developer </span>
             passionate about creating clean, scalable, and engaging solutions
@@ -23,10 +23,10 @@ export default function Hero() {
 
         {/* RIGHT IMAGE */}
         <img
-          className='w-full rounded-2xl shadow-xl object-contain border-2 border-amber-400'
+          className='w-2/3 sm:w-3/4 md:w-full mx-auto rounded-2xl shadow-xl object-contain border-2 border-amber-400'
           src='/breno.png'
           alt='Profile'
-        ></img>
+        />
       </div>
     </section>
   );
