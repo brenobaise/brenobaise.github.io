@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,18 @@ export default function NavBar() {
     { name: "Contact", href: "#" },
   ];
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
   return (
     <>
       <nav className='md:bg-slate-900 text-white flex justify-end items-center md:text-3xl md:py-4 px-6'>
@@ -58,7 +70,7 @@ export default function NavBar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className='flex flex-col items-center justify-center h-full gap-8 text-2xl'>
+        <ul className='flex flex-col items-center justify-center h-full gap-8 text-2xl select-none '>
           {menuItems.map((item) => (
             <li
               key={item.name}
