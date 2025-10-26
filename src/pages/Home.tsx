@@ -5,7 +5,7 @@ import Projects from "../components/Projects";
 
 export default function Home() {
   return (
-    <div className='bg-slate-900 min-h-screen w-100% overflow-hidden'>
+    <div className='bg-slate-900 min-h-[100dvh] w-100% overflow-hidden'>
       <NavBar />
       <div className=' mx-auto px-4 pb-20'>
         <Hero />

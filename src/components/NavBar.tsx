@@ -54,7 +54,7 @@ export default function NavBar() {
 
       {/* Mobile fullscreen menu */}
       <div
-        className={`md:hidden h-screen overflow-hidden fixed inset-0 bg-slate-900 z-40 transition-transform duration-300 ${
+        className={`md:hidden min-h-[100dvh] overflow-hidden fixed inset-0 bg-slate-900 z-40 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
