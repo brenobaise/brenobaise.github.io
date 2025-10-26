@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +9,13 @@ export default function NavBar() {
     { name: "Projects", href: "#" },
     { name: "Contact", href: "#" },
   ];
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <>
